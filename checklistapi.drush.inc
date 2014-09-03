@@ -91,7 +91,7 @@ function drush_checklistapi_info_validate() {
 
   // Make sure the given checklist exists.
   if (!$checklist) {
-    drush_set_error('', dt('No such checklist "!id".', array(
+    drush_set_error('CHECKLISTAPI_INVALID_ARGUMENT', dt('No such checklist "!id".', array(
       '!id' => $id,
     )));
   }
