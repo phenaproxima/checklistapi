@@ -142,7 +142,7 @@ function drush_checklistapi_info() {
       if ($saved_item) {
         // Append completion details.
         $user = user_load($saved_item['#uid']);
-        $title .= t(' - Completed @time by !user', array(
+        $title .= dt(' - Completed @time by !user', array(
           '@time' => format_date($saved_item['#completed'], 'short'),
           '!user' => strip_tags($user->name),
         ));
